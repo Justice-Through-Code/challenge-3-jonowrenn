@@ -23,7 +23,6 @@ def stock_purchases():
 
     # 1.4 TODO: Use `if/elif/else` conditional logic to determine how much stock the client can buy,
     # and save it in a variable
-    stocks = 0
     if stock_name == "Amazon":
         stocks = amazon
     elif stock_name == "Apple":
@@ -40,4 +39,4 @@ def stock_purchases():
     # Use an f-string to print the result for the client, ala:
     print(f'{first_name} has ${investment_dollars} to invest and can buy {num_stocks} shares of {stock_name} at the current price of ${stocks}. ')
     # Alex has $5000 to invest and can buy 50 shares of Apple at the current price of $100.
-stock_purchases()
+#stock_purchases()
