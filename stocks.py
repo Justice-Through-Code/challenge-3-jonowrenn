@@ -1,17 +1,14 @@
-
+# use dictionary to improve this code
+# use dictionary to make stock purchases easier to pull from?
 def stock_purchases():
-    amazon = 3000
-    apple = 100
-    fb = 250
-    google = 1400
-    msft = 200
+    stock = {'amazon':3000,'apple':100,'fb':250,'google':1400,'msft':200}
 
     # Given the prices above and a client's investment budget, how much stock can they buy?
     # 1.1 TODO: Ask the client's name (use the string: "What is your name? ") and save it into a variable
     first_name = input('What is your name? ')
     # 1.2 TODO: Ask the client how many dollars they would like to invest (use the string: "How much would you like to invest? $")
     # and save it into a variable
-    investment_dollars = int(input('How much would you like to invest? $'))
+    investment_dollar = int(input('How much would you like to invest? $'))
     # NOTE: When you use the `input` function to get user input, what do numbers get saved as?
     
     # 1.3 TODO: Uncomment the line below to ask the client which stock they're interested in.
@@ -23,20 +20,20 @@ def stock_purchases():
 
     # 1.4 TODO: Use `if/elif/else` conditional logic to determine how much stock the client can buy,
     # and save it in a variable
-    if stock_name == "Amazon":
-        stocks = amazon
-    elif stock_name == "Apple":
-        stocks = apple
-    elif stock_name == "Facebook":
-        stocks = fb
-    elif stock_name == "Google":
-        stocks = google
-    elif stock_name =="Microsoft":
-        stocks = msft
+    if stock_name == "amazon":
+        num_stock = investment_dollar//stock['amazon']
+    elif stock_name == "apple":
+        num_stock = investment_dollar//stock['apple']
+    elif stock_name == "fb":
+        num_stock = investment_dollar//stock['fb']
+    elif stock_name == "google":
+        num_stock = investment_dollar//stock['google']
+    elif stock_name =="msft":
+        num_stock = investment_dollar//stock['msft']
 
-    num_stocks = investment_dollars//stocks 
+    num_stock = investment_dollar//stock
     # 1.5 TODO: Once you've calculated the number of stocks that can be purchased,
     # Use an f-string to print the result for the client, ala:
-    print(f'{first_name} has ${investment_dollars} to invest and can buy {num_stocks} shares of {stock_name} at the current price of ${stocks}.')
+    print(f'{first_name} has ${investment_dollar} to invest and can buy {num_stock} shares of {stock_name} at the current price of ${stocks}.')
     # Alex has $5000 to invest and can buy 50 shares of Apple at the current price of $100.
 #stock_purchases()
